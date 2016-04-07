@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: hackHousing
+  host: hackHousing
+  disk_quota: 1024M
+  services:
+  - SQL Database-kl

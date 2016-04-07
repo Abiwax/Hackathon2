@@ -1,0 +1,76 @@
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="styles/icons/money.png" />
+	<title>User Page</title>
+	<link rel="stylesheet" type="text/css" href="styles/globalB.css" />
+	<link rel="stylesheet" type="text/css" href="styles/icons.css" />
+	<!--CSS-->
+	<meta name="viewport" content="width=device-width, initial-scale: 1.0, user-scalable=0"/>
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/generalB.js"></script>
+	<script src="./js/selectOptions.js"></script>
+	<script src="./js/getSettings.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="./js/jquery-1.12.0.min.js"></script>
+	<script src="./js/map.js"></script>
+	<script src="./js/ChartNew.js"></script>
+	
+
+	<!--JS-->
+</head>
+<body>
+	<div id="header">
+		<div class="mobile"></div>
+		<div class="logo"><span><a href="#">Housing<span>HACK</span></a></span></div>
+	</div>
+	<div id="container">
+		<div class="sidebar">
+			<ul id="nav">
+				<!--<li><a href="index.html"><div class="iconDash"></div><span>Comparison</span></a></li>-->
+				<li><a href="index.html" class="selected"> <div class="iconSchedule"></div><span>Buy</span></a></li>
+				<li><a href="rent.html"><div class="iconProfile"></div><span>Rent</span></a></li>
+				<li><a href="login.html"><div class="iconOut"></div><span>Log Out</span></a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<h1>Buy</h1>
+			Current House Trend Selling Price vs Predicted
+			<div class="alert">
+
+				<div class="iconClose"></div>
+
+				Hi, To get an information about a state, please choose your preferred state below and a city and click on the 
+				confirm button to continue.
+			</div>
+			<div id="box">
+				<div class="box-panel">
+					<div class="dropDownSpace">
+						<div class="firstDropDown">  Province
+							<select name="provinceB" id="provinceB" onchange="/*globals chartsLoadB */
+							if(this.value != '') setCityB(this.options[this.selectedIndex].value);">
+							</select>
+						</div>
+						<div class="secondDropDown">  City
+							<select name="cityB" id="cityB">
+							</select>
+						</div>
+						<div class="confirm">
+							<input type="button" value="Confirm" onclick="chartsLoadA()"></p>
+						</div>
+					</div>
+					<div class="boxCharts">
+						<div class="box-panel1">
+							<div class="divCanvasBox1">Trend of House Selling Price<canvas id="actual" ></canvas></div>
+						</div>
+						<div class="box-panel2">
+							<div class="divCanvasBox1">House Selling Price Prediction<canvas id="predicted" width="475" height="400"></canvas></div>
+						</div>
+					
+						<div class="mapSection" id="mapSection"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
