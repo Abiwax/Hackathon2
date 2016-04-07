@@ -8,11 +8,12 @@ function chartsLoadA(){
   	var listbox = document.getElementById("provinceB");
 	var selIndex = listbox.selectedIndex;
 //var location = listbox.options[selIndex].value;
-  	var address =listbox.options[selIndex].text;
+  	
   	var listbox2 = document.getElementById("cityB");
 	var selIndex2 = listbox2.selectedIndex;
 //var location = listbox.options[selIndex].value;
   	var city =listbox2.options[selIndex2].text;
+    var address = city +", "+listbox.options[selIndex].text;
 	if(city == "" || address == "null"){
 		alert("Please select all the parameters you want")
 	}

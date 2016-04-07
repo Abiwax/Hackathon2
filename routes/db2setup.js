@@ -7,7 +7,7 @@ var fs = require('fs');
 var table1 = "buyData";
 var table2 = "SalesPredict"
 var table3 = "ActualRent"
-var table4 = "PredictedRent"
+var table4 = "predictedRent"
 // function to encode file data to base64 encoded string
 function base64_encode(file) {
     var bitmap = fs.readFileSync(file);

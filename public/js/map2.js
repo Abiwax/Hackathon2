@@ -9,11 +9,12 @@ $(".boxCharts").show();
   	var listbox1 = document.getElementById("provinceR");
 	var selIndex1 = listbox1.selectedIndex;
 //var location = listbox1.options[selIndex].value;
-  	var address =listbox1.options[selIndex1].text;
+  	
   	var listbox2 = document.getElementById("cityR");
 	var selIndex2 = listbox2.selectedIndex;
 //var location = listbox.options[selIndex].value;
   	var city =listbox2.options[selIndex2].text;
+    var address =city +", " +listbox1.options[selIndex1].text;
   	  	var listbox3= document.getElementById("structureR");
 	var selIndex3 = listbox3.selectedIndex;
 var structure = listbox3.options[selIndex3].value;
@@ -27,13 +28,13 @@ var unit = listbox4.options[selIndex4].value;
 	}
 	else{
 	
-  $.get(SERVER_URL + '/getActualBuy',{'province':address,'city':city,'structure':structure,'unit':unit}, function(record) {
+  $.get(SERVER_URL + '/getActualRent',{'province':address,'city':city,'structure':structure,'unit':unit}, function(record) {
     //console.log("Got response: " + record.BODY);
  if (record == null) {
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{
-	$.get(SERVER_URL + '/getPredictedBuy',{'province':address,'city':city,'structure':structure,'unit':unit}, function(record2) {
+	$.get(SERVER_URL + '/getPredictedRent',{'province':address,'city':city,'structure':structure,'unit':unit}, function(record2) {
     //console.log("Got response: " + record.BODY);
  if (record2 == null) {
   //Chart parameter declaration
