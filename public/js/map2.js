@@ -56,13 +56,13 @@ var unit = listbox4.options[selIndex4].value;
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
             data: record.map(function(rec){
-          return rec."Annual Rent";
+          return rec.rent;
         })
         }
     ]
 };
-console.log(record.map(function(rec){
-          return rec."Annual Rent";
+ console.log(record.map(function(rec){
+          return rec[0];
         }))
 var data2 = {
     labels: record2.map(function(rec){
