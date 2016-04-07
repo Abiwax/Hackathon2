@@ -23,6 +23,8 @@ var structure = listbox3.options[selIndex3].value;
 	var selIndex4 = listbox4.selectedIndex;
 var unit = listbox4.options[selIndex4].value;
   	//var city =listbox4.options[selIndex4].text;
+    console.log(structure);
+    console.log(unit);
 	if(city == "" || address == "" || structure == "" || unit == ""){
 		alert("Please select all the parameters you want")
 	}
