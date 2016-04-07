@@ -1,0 +1,14 @@
+{
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.ng.bluemix.net",
+      "Org": "abisolaadeniran@yahoo.com",
+      "Space": "dev"
+    },
+    "Name": "hackHousing",
+    "Instrumentation": {}
+  },
+  "Path": "",
+  "Type": "Cloud Foundry"
+}
