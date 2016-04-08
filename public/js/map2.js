@@ -25,8 +25,8 @@ var unit = listbox4.options[selIndex4].value;
   	//var city =listbox4.options[selIndex4].text;
     console.log(structure);
     console.log(unit);
-	if(city == "" || province == "" || structure == "" || unit == ""){
-		alert("Please select all the parameters you want")
+	if(city == "-Select-" || province == "-Select-" || structure == "-Select-" || unit == "-Select-"){
+		alert("Please select a correct value")
 	}
 	else{
 	

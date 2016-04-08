@@ -14,8 +14,8 @@ function chartsLoadA(){
 //var location = listbox.options[selIndex].value;
   	var city =listbox2.options[selIndex2].text;
     var address = city +", "+province
-	if(city == "" || address == "null"){
-		alert("Please select all the parameters you want")
+	if(city == "-Select-" || province == "-Select-"){
+		alert("Please select a correct value")
 	}
 	else{
   $.get(SERVER_URL + '/getActualBuy',{'province':province,'city':city}, function(record) {
