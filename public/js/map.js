@@ -8,17 +8,17 @@ function chartsLoadA(){
   	var listbox = document.getElementById("provinceB");
 	var selIndex = listbox.selectedIndex;
 //var location = listbox.options[selIndex].value;
-  	
+  	var province = listbox.options[selIndex].text;
   	var listbox2 = document.getElementById("cityB");
 	var selIndex2 = listbox2.selectedIndex;
 //var location = listbox.options[selIndex].value;
   	var city =listbox2.options[selIndex2].text;
-    var address = city +", "+listbox.options[selIndex].text;
+    var address = city +", "+province
 	if(city == "" || address == "null"){
 		alert("Please select all the parameters you want")
 	}
 	else{
-  $.get(SERVER_URL + '/getActualBuy',{'province':address,'city':city}, function(record) {
+  $.get(SERVER_URL + '/getActualBuy',{'province':province,'city':city}, function(record) {
  
     //console.log("Got response: " + record.BODY);
  if (record == null) {
@@ -26,7 +26,7 @@ function chartsLoadA(){
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{
-	$.get(SERVER_URL + '/getPredictedBuy',{'province':address,'city':city}, function(record2) {
+	$.get(SERVER_URL + '/getPredictedBuy',{'province':province,'city':city}, function(record2) {
  		if (record == null) {
  			alert("Predicted data is not yet available, please visit another time.");
  			}else{
