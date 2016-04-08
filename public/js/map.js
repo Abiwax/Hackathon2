@@ -1,7 +1,7 @@
 /*eslint-env browser, jquery*/
 var SERVER_URL = "http://hackhousing.mybluemix.net";
 function chartsLoadA(){
-	$(".boxCharts").show();
+	
 //Map parameter
 	var geocoder;
   	var map;
@@ -18,6 +18,7 @@ function chartsLoadA(){
 		alert("Please select a correct value")
 	}
 	else{
+    $(".boxCharts").show();
   $.get(SERVER_URL + '/getActualBuy',{'province':province,'city':city}, function(record) {
  
     //console.log("Got response: " + record.BODY);

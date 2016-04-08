@@ -3,7 +3,7 @@
 var SERVER_URL = "http://hackhousing.mybluemix.net";
 function chartsLoadB(){	
 //Map parameter
-$(".boxCharts").show();
+
 	var geocoder;
   	var map;
   	var listbox1 = document.getElementById("provinceR");
@@ -29,7 +29,7 @@ var unit = listbox4.options[selIndex4].value;
 		alert("Please select a correct value")
 	}
 	else{
-	
+	$(".boxCharts").show();
   $.get(SERVER_URL + '/getActualRent',{'province':province,'city':city,'structure':structure,'unit':unit}, function(record) {
     //console.log("Got response: " + record.BODY);
  if (record.length == 0) {
