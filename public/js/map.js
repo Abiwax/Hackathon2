@@ -18,7 +18,6 @@ function chartsLoadA(){
 		alert("Please select a correct value")
 	}
 	else{
-    $(".boxCharts").show();
   $.get(SERVER_URL + '/getActualBuy',{'province':province,'city':city}, function(record) {
  
     //console.log("Got response: " + record.BODY);
@@ -31,7 +30,7 @@ function chartsLoadA(){
  		if (record.length == 0) {
  			alert("Predicted data is not yet available, please visit another time.");
  			}else{
- 			
+ 			$(".boxCharts").show();
 			var data = {
     labels: record.map(function(rec){
           return rec.Year;

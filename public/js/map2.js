@@ -29,7 +29,6 @@ var unit = listbox4.options[selIndex4].value;
 		alert("Please select a correct value")
 	}
 	else{
-	$(".boxCharts").show();
   $.get(SERVER_URL + '/getActualRent',{'province':province,'city':city,'structure':structure,'unit':unit}, function(record) {
     //console.log("Got response: " + record.BODY);
  if (record.length == 0) {
@@ -42,6 +41,7 @@ var unit = listbox4.options[selIndex4].value;
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{
+  $(".boxCharts").show();
 			var data = {
     labels: record.map(function(rec){
           return rec.Year;
