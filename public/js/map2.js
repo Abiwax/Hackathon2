@@ -32,13 +32,13 @@ var unit = listbox4.options[selIndex4].value;
 	
   $.get(SERVER_URL + '/getActualRent',{'province':province,'city':city,'structure':structure,'unit':unit}, function(record) {
     //console.log("Got response: " + record.BODY);
- if (record == null) {
+ if (record.length == 0) {
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{
 	$.get(SERVER_URL + '/getPredictedRent',{'province':province,'city':city,'structure':structure,'unit':unit}, function(record2) {
     //console.log("Got response: " + record.BODY);
- if (record2 == null) {
+ if (record2.length == 0) {
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{

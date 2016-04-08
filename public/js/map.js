@@ -21,13 +21,13 @@ function chartsLoadA(){
   $.get(SERVER_URL + '/getActualBuy',{'province':province,'city':city}, function(record) {
  
     //console.log("Got response: " + record.BODY);
- if (record == null) {
+ if (record.length == 0) {
  	
   //Chart parameter declaration
   alert("This data is not yet available, please visit another time.");
 }else{
 	$.get(SERVER_URL + '/getPredictedBuy',{'province':province,'city':city}, function(record2) {
- 		if (record == null) {
+ 		if (record.length == 0) {
  			alert("Predicted data is not yet available, please visit another time.");
  			}else{
  			
