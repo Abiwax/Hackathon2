@@ -230,6 +230,9 @@ cityArrB['BC'] = {
 		'Vancouver':'Vancouver', 
 		'Victoria':'Victoria'
 	}
+cityArrB['NT'] = {
+		'Yellowknife':'Yellowknife'
+	}
 
 
 function removeOptions(selectObj)
