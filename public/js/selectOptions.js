@@ -4,12 +4,12 @@ var provinceArr = [];
 var cityArr = [];
 var cityArrB = [];
 
-provinceArr = {'AB': 'Alberta', 'BC':'British Columbia', 'MB':'Manitoba', 'NB': 'New Brunswick', 'NL':'Newfoundland and Labrador','NS':'Nova Scotia', 'NT':'Northwest Territories', 'ON':'Ontario', 'QC':'Quebec', 'SK':'Saskatchewan'} 
+provinceArr = {'-Select-': '-Select-', 'AB': 'Alberta', 'BC':'British Columbia', 'MB':'Manitoba', 'NB': 'New Brunswick', 'NL':'Newfoundland and Labrador','NS':'Nova Scotia', 'NT':'Northwest Territories', 'ON':'Ontario', 'QC':'Quebec', 'SK':'Saskatchewan'} 
 
 // provinceArr = {'CA':'CA', 'AB': 'AB', 'BC':'BC', 'MB':'MB', 'NB': 'NB', 'NL':'NL','NS':'NS', 'NT':'NT', 'NU':'NU', 'ON':'ON', 'PE':'PE', 'QC':'QC', 'SK':'SK', 'YT':'YT'} 
 
 // cityArr[province] = {city1:city1, city2:city2}
-
+cityArr['-Select-'] = {'-Select-':'-Select-'}
 
 cityArr['NL'] = {'Gander':'Gander','Bay Roberts':'Bay Roberts', 'Corner Brook':'Corner Brook', 'Grand Falls-Windsor':'Grand Falls-Windsor', 'St. John\'s':'St. John\'s'}
 
@@ -169,11 +169,7 @@ cityArr['NT'] = {
 		'Yellowknife':'Yellowknife'
 	}
 
-cityArrB['CA'] = {
-		'All':'All', 
-		'Ottawa part':'Ottawa part', 
-		'Gatineau part':'Gatineau part'
-	}
+cityArrB['-Select-'] = {'-Select-':'-Select-'}
 
 cityArrB['NL'] = {
 		'St. John\'s':'St. John\'s'
