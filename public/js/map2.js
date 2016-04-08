@@ -62,7 +62,10 @@ var unit = listbox4.options[selIndex4].value;
     ]
 };
  console.log(record.map(function(rec){
-          return rec["Annual Rent"];
+          return rec;
+        }));
+  console.log(record.map(function(rec){
+          return rec.Year;
         }))
 var data2 = {
     labels: record2.map(function(rec){
