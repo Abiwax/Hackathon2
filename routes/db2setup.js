@@ -149,16 +149,13 @@ function base64_decode(base64str, file) {
                 if (err) {
                   console.log(err);
                   response.end();
-                } else {
-                  /*var res = [];
-                  for(var i=0;i<data.length;i++) {
-                    var temp = data[i];
-                    temp.IMG = base64_encode('./'+ data[i].IMG);
-                    res.push(temp);
-                    
-                  }*/
-                  console.log(data)
-                   return response.json(200, data);
+                } else { 
+                  var res = [];
+                 for(var i=0;i<data.length;i++) {
+                   var temp = data[i];
+                   res.push(temp);
+                 }
+                 response.json(res);
                 }
                 conn.close(function () {
                 });
@@ -197,16 +194,13 @@ exports.getPredictedRent = function(request, response) {
               if (err) {
                 console.log(err);
                   response.end();
-              } else {
-               /* var res = [];
-                for(var i=0;i<data.length;i++) {
-                  var temp = data[i];
-                  temp.IMG = base64_encode('./'+ data[i].IMG);
-                  res.push(temp);
-                  console.log(data)
-                }*/
-                console.log(data)
-                   return response.json(200, data);
+              } else { 
+                var res = [];
+                 for(var i=0;i<data.length;i++) {
+                   var temp = data[i];
+                   res.push(temp);
+                 }
+                 response.json(res);
               }
               conn.close(function () {
               });

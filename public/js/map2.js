@@ -68,8 +68,8 @@ var unit = listbox4.options[selIndex4].value;
           return rec.Year;
         }))
 var data2 = {
-    labels: record2.map(function(rec){
-          return rec.Year;
+    labels: record2.map(function(rec2){
+          return rec2.Year;
         }),
     datasets: [
         {
@@ -80,8 +80,8 @@ var data2 = {
             pointStrokeColor: "#012829",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: record.map(function(rec){
-          return rec["Annual Rent"];
+            data: record2.map(function(rec2){
+          return rec2["Annual Rent"];
         })
         }
     ]
