@@ -153,15 +153,32 @@ var lineOptions = {
 
 // Charts
 			var context1 = document.getElementById('actual').getContext('2d');
-			context1.canvas.width = 475;
-			context1.canvas.height = 400;
-			window.myLineChart = new Chart(context1).Line(data, lineOptions);
-			var context2 = document.getElementById('predicted').getContext('2d');
-			context2.canvas.width = 475;
-			context2.canvas.height = 400;
-			window.myLineChart = new Chart(context2).Line(data2, lineOptions);
+var context2 = document.getElementById('predicted').getContext('2d');
+// Charts
+if($(window).width() > 500)
+    {
+      
+      context1.canvas.width = 475;
+      context1.canvas.height = 400;
+      window.myLineChart = new Chart(context1).Line(data, lineOptions);
+      
+      context2.canvas.width = 475;
+      context2.canvas.height = 400;
+      window.myLineChart = new Chart(context2).Line(data2, lineOptions);
+    }
+    else if($(window).width() < 500)
+    {
+      
+      context1.canvas.width = 340;
+      context1.canvas.height = 270;
+      window.myLineChart = new Chart(context1).Line(data, lineOptions);
+      
+      context2.canvas.width = 340;
+      context2.canvas.height = 270;
+      window.myLineChart = new Chart(context2).Line(data2, lineOptions);
+    }
+
 		}
-	
 
 		}).fail(function(error) {
     alert(error.responseText);
@@ -172,4 +189,40 @@ var lineOptions = {
   });
 
   }
+}
+window.addEventListener("resize", drawCanvas, false);
+
+function drawCanvas() {
+  var canvas = document.getElementById("actual");
+  var canvas2 = document.getElementById("predicted");
+  console.log(canvas);
+   resizeCanvas(canvas,canvas2);
+}
+function resizeCanvas(a,p) {
+  // Our canvas must cover full height of screen
+  // regardless of the resolution
+  var canvas = a;
+  var canvas2 = p;
+  console.log(canvas);
+  var hei = document.getElementById("hei");
+  var height = 270;
+  var wid = 340;
+  var w = window.innerWidth;
+  // So we need to calculate the proper scaled width
+  // that should work well with every resolution
+  var ratio = wid/height;
+  if (w < 500) {
+  var width = height;
+  canvas.style.width = wid;
+  canvas.style.height = height;
+  canvas2.style.width = wid;
+  canvas2.style.height = height;
+}
+else if(w > 500){
+var width = height* ratio;
+  canvas.style.width = 475;
+  canvas.style.height = 400;
+  canvas2.style.width = 475;
+  canvas2.style.height = 400;
+}
 }

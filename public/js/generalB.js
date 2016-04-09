@@ -10,6 +10,8 @@ $(document).ready(function() {
 	$('.iconClose').on('click', function(){
     $(this).parent().remove();
 });
+
+
 $(".boxCharts").hide();
 	window.onresize = function(event)
 	{
@@ -34,5 +36,4 @@ $(".boxCharts").hide();
    // });
 
 });
-
 
