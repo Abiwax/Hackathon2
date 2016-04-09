@@ -37,7 +37,7 @@ div#container
 	margin: 0 auto;
 	background-color: #A6A6A6
 }
-.alert {
+	.alert {
 	font-size: 14px;
 	padding: 15px;
 	margin-top: 20px;
@@ -46,16 +46,16 @@ div#container
 	background-color: #dff0d8;
 	border-color: #d6e9c6;
 	color: #3c763d
-}
-.sidebar {
+	}
+	.sidebar {
 	width: 230px;
 	/*height: calc(100% - 50px); */
 	background-color: #A6A6A6;
 	float: left;
 	height: 100%;
-}
+	}
 
-.msgDrop{
+	.msgDrop{
 		color: #323133;
 		text-align: center;
 		display: none;
@@ -71,7 +71,7 @@ div#container
 		margin-left: 12px;
 
 	}
-ul#nav{
+	ul#nav{
 
 	}
 	ul#nav li{
@@ -100,7 +100,7 @@ ul#nav{
 		color: #fff;
 	}
 
-.content{
+	.content{
 	width: auto;
 	margin-left: 230px;
 	height: auto;
@@ -306,6 +306,7 @@ ul#nav{
 		.content
 		{
 			margin-left: 0px;
+			width: 100%;
 		}
 		.logo{
 			margin-left: 10px;
