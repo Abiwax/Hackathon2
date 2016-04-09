@@ -169,12 +169,12 @@ if($(window).width() > 500)
     else if($(window).width() < 500)
     {
       
-      context1.canvas.width = 340;
-      context1.canvas.height = 270;
+      context1.canvas.width = 300;
+      context1.canvas.height = 230;
       window.myLineChart = new Chart(context1).Line(data, lineOptions);
       
-      context2.canvas.width = 340;
-      context2.canvas.height = 270;
+      context2.canvas.width = 300;
+      context2.canvas.height = 230;
       window.myLineChart = new Chart(context2).Line(data2, lineOptions);
     }
 
@@ -205,8 +205,8 @@ function resizeCanvas(a,p) {
   var canvas2 = p;
   console.log(canvas);
   var hei = document.getElementById("hei");
-  var height = 270;
-  var wid = 340;
+  var height = 230;
+  var wid = 300;
   var w = window.innerWidth;
   // So we need to calculate the proper scaled width
   // that should work well with every resolution
