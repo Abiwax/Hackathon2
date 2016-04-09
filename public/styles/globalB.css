@@ -311,7 +311,9 @@ div#container
 		.logo{
 			margin-left: 10px;
 		}
-		
+		.dropDownSpace{
+			width: 100%;
+		}
 
 	}
 	@media only screen and (min-width: 500px)
